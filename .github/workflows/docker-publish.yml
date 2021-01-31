@@ -52,6 +52,7 @@ jobs:
       - name: Build image
         run: |
             yarn
+            yarn build
             docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
