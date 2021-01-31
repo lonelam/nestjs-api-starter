@@ -65,6 +65,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build and Push image
+        id: docker_build
         run: |
           IMAGE_ID=lonelam/$IMAGE_NAME
 
@@ -85,5 +86,3 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
