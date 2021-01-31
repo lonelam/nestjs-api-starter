@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "docker-build": "docker build --tag nest-api-starter:$(git rev-parse --short HEAD) .",
+    "docker-build": "docker build --tag nest-api-starter .",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
